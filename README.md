@@ -1,3 +1,7 @@
+### My solution:
+Simply by reading through each file then uploading the data into the csv's using split. Retrieved the column names by iterating through the data using a split then added data to a dict, where I used a SortedDict to sort the numbers then add the values to the file. Similarily, for retrieving the headers I did with the data with a similar style of code with minor adjustments because I had to append the already existing file. The scenario states that each day a new file will be coming in therefore, I made the date the file name of each csv, which will prevent allow the users to have files from previous days. 
+
+
 ### Things learned along the way/Remarks:
  - Github doesn't allow to have blank folders within the repository, so you have to include a placeholder file
  - When writing to an existing file you must use a 'a' instead of 'w' or else it will overwrite
