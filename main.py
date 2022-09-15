@@ -2,6 +2,7 @@
 This is the entrypoint to the program. 'python main.py' will be executed and the 
 expected csv file should exist in ../data/destination/ after the execution is complete.
 """
+#The main works by importing both classes into, creating a function for the respective work needeed to be done. The
 from src import sourcecolumns
 from src import sourcedata
 
@@ -11,9 +12,10 @@ def columns_extractions():
     headerslist = sourcecolumns.ColumnExtraction.obtaining_headers(relfilepath)
     sourcecolumns.ColumnExtraction.uploadingheaders(headerslist)
 
+#Going to reuse the filepath function from sourcecolumns.py
 def data_extraction():
     file_source_name = 'SOURCEDATA.txt'
-    filepath = sourcedata.DataExtraction.obtainingfilepath(file_source_name)
+    filepath = sourcecolumns.ColumnExtraction.filepath(file_source_name)
     sourcedata.DataExtraction.addingdata(filepath)
 
 
