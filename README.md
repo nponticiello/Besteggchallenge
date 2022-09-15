@@ -1,3 +1,10 @@
+### Things learned along the way/Remarks:
+ - Github doesn't allow to have blank folders within the repository, so you have to include a placeholder file
+ - When writing to an existing file you must use a 'a' instead of 'w' or else it will overwrite
+ - When naming a csv you cannot use '/' character which is why you will see the '-' in the date function
+
+
+
 ### The scenario:
 - You have a vendor that delivers 2 files (`SOURCEDATA.TXT`, `SOURCECOLUMNS.txt`) every day at 6AM UTC. These files will land in `data/source/` for processing. For this assessment, you are provided the files in the `data/source/` path as if they were already delivered from the vendor.
 - One file contains the raw pipe-delimited data (`SOURCEDATA.TXT`) without a header row.
