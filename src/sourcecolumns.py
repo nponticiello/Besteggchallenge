@@ -1,6 +1,7 @@
 import os
 import collections
 import csv
+import datetime
 
 
 #Retrieved abs path by using dirname + the file path. Then iterated through the data and added to a dict, which was then put in a OrderedDict to sort. 
@@ -27,6 +28,8 @@ class ColumnExtraction:
         return header_list
 
     def uploadingheaders(headerlist: []):
-        with open('output.csv', 'w') as file:
+        ct = datetime.datetime.now()
+        cur_date = ct.strftime('%m-%d-%Y')
+        with open(f'{cur_date}.csv', 'w') as file:
             writer = csv.DictWriter(file, delimiter=',', fieldnames=headerlist)
             writer.writeheader()
