@@ -1,7 +1,8 @@
 import csv
 import os
 from src import some_storage_library
-
+#Used a similar method as the sourcecolumns.py to obtianing the file. Then was able to add the data to the file by iterating through using .split
+#Note that with open has an 'a' because we are appending not overwritting this allows us to keep the header row
 
 class DataExtraction:
 
