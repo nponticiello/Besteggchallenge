@@ -6,8 +6,9 @@ from src import some_storage_library
 class DataExtraction:
 
     def obtainingfilepath(rel_path:str)->str:
+        path_file =  'data/source/' + rel_path
         dir = os.path.dirname(__file__)
-        PATH_NAME = os.path.join(os.path.split(dir)[0], rel_path)
+        PATH_NAME = os.path.join(os.path.split(dir)[0], path_file)
         return PATH_NAME
 
     def addingdata(path_name:str):
