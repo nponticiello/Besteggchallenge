@@ -2,8 +2,9 @@ import os
 import collections
 import csv
 
-rel_path = 'data/source/SOURCECOLUMNS.txt'
 
+#Retrieved abs path by using dirname + the file path. Then iterated through the data and added to a dict, which was then put in a OrderedDict to sort. 
+#The values were then in order which allowed me to add those as the headers to the csv
 
 class ColumnExtraction:
 
