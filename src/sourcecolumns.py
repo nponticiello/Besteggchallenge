@@ -8,8 +8,9 @@ rel_path = 'data/source/SOURCECOLUMNS.txt'
 class ColumnExtraction:
 
     def filepath(rel_path: str) -> str:
+        path_file = 'data/source/' + rel_path
         dir = os.path.dirname(__file__)
-        path_name = os.path.join(os.path.split(dir)[0], rel_path)
+        path_name = os.path.join(os.path.split(dir)[0], path_file)
         return path_name
 
     def obtaining_headers(path_name: str):
